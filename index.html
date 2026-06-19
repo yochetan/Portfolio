@@ -1,0 +1,471 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chetan Mewada | DevOps Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#09090f;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:linear-gradient(#2563eb,#7c3aed);
+filter:blur(180px);
+opacity:.25;
+top:-150px;
+right:-100px;
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:400px;
+height:400px;
+background:#06b6d4;
+filter:blur(180px);
+opacity:.15;
+bottom:-150px;
+left:-100px;
+z-index:-1;
+}
+
+nav{
+position:fixed;
+width:100%;
+top:0;
+backdrop-filter:blur(15px);
+background:rgba(255,255,255,.05);
+border-bottom:1px solid rgba(255,255,255,.08);
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+}
+
+.logo{
+font-size:24px;
+font-weight:800;
+background:linear-gradient(90deg,#60a5fa,#a855f7);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-size:14px;
+}
+
+section{
+padding:120px 8%;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+}
+
+.hero-text{
+max-width:650px;
+}
+
+.hero h1{
+font-size:70px;
+font-weight:900;
+line-height:1;
+}
+
+.gradient{
+background:linear-gradient(90deg,#60a5fa,#a855f7);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero h2{
+margin-top:15px;
+font-size:30px;
+font-weight:600;
+color:#94a3b8;
+}
+
+.hero p{
+margin-top:25px;
+line-height:1.8;
+color:#cbd5e1;
+}
+
+.btns{
+margin-top:35px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:14px 28px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.primary{
+background:linear-gradient(90deg,#2563eb,#7c3aed);
+color:white;
+}
+
+.secondary{
+border:1px solid rgba(255,255,255,.15);
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.hero-card{
+width:380px;
+height:380px;
+border-radius:30px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(25px);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:120px;
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+}
+
+.section-title{
+font-size:42px;
+margin-bottom:50px;
+font-weight:800;
+}
+
+.glass{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
+padding:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.skill-card h3{
+margin-bottom:15px;
+}
+
+.skill{
+display:inline-block;
+padding:8px 12px;
+background:rgba(255,255,255,.08);
+border-radius:8px;
+margin:5px;
+font-size:13px;
+}
+
+.timeline{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.project{
+height:220px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+font-size:22px;
+}
+
+.education,
+.github,
+.contact{
+line-height:1.8;
+}
+
+.contact form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+padding:15px;
+border-radius:12px;
+color:white;
+}
+
+textarea{
+height:150px;
+resize:none;
+}
+
+footer{
+padding:40px;
+text-align:center;
+color:#94a3b8;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+@media(max-width:900px){
+.hero{
+flex-direction:column;
+text-align:center;
+padding-top:100px;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero-card{
+width:280px;
+height:280px;
+font-size:80px;
+}
+
+nav ul{
+display:none;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">CM</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<div class="hero-text">
+<h1>Chetan <span class="gradient">Mewada</span></h1>
+
+<h2>DevOps Engineer</h2>
+
+<p>
+Building reliable, scalable, and automated infrastructure for modern applications.
+Passionate about Docker, Kubernetes, Terraform, GitHub Actions, Linux, Networking,
+and cloud-native technologies.
+</p>
+
+<div class="btns">
+<a href="#projects" class="btn primary">View My Work</a>
+<a href="#contact" class="btn secondary">Contact Me</a>
+<a href="#" class="btn secondary">Download Resume</a>
+</div>
+</div>
+
+<div class="hero-card">
+⚙️
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="glass">
+<p>
+Hello! I'm Chetan Mewada, a Computer Science graduate and aspiring DevOps Engineer.
+
+I enjoy solving infrastructure challenges, automating repetitive tasks,
+and building reliable deployment systems.
+
+My interests include containerization, Infrastructure as Code, CI/CD automation,
+cloud-native technologies, Linux administration, and networking.
+
+My goal is to contribute to modern engineering teams by building scalable,
+secure, and automated systems.
+</p>
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="grid">
+
+<div class="glass skill-card">
+<h3>Containerization</h3>
+<span class="skill">Docker</span>
+<span class="skill">Kubernetes</span>
+</div>
+
+<div class="glass skill-card">
+<h3>CI/CD</h3>
+<span class="skill">Git</span>
+<span class="skill">GitHub</span>
+<span class="skill">GitHub Actions</span>
+</div>
+
+<div class="glass skill-card">
+<h3>Infrastructure</h3>
+<span class="skill">Terraform</span>
+<span class="skill">Ansible</span>
+</div>
+
+<div class="glass skill-card">
+<h3>Linux & Networking</h3>
+<span class="skill">Linux</span>
+<span class="skill">DNS</span>
+<span class="skill">HTTP/HTTPS</span>
+<span class="skill">TCP/IP</span>
+</div>
+
+</div>
+
+</section>
+
+<section id="experience">
+
+<h2 class="section-title">Professional Journey</h2>
+
+<div class="timeline">
+
+<div class="glass">
+<h3>DevOps Engineer (Fresher)</h3>
+<p>
+Actively building hands-on projects and gaining practical experience with Docker,
+Kubernetes, Terraform, GitHub Actions, Linux Administration, and Automation.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Featured Projects</h2>
+
+<div class="grid">
+
+<div class="glass project">Project 01 - Coming Soon</div>
+<div class="glass project">Project 02 - Coming Soon</div>
+<div class="glass project">Project 03 - Coming Soon</div>
+<div class="glass project">Project 04 - Coming Soon</div>
+<div class="glass project">Project 05 - Coming Soon</div>
+<div class="glass project">Project 06 - Coming Soon</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Education</h2>
+
+<div class="glass education">
+
+<h3>Bachelor of Science in Computer Science (B.Sc. CS)</h3>
+
+<p>
+Completed undergraduate studies with a strong foundation in
+Programming, Networking, Databases, Operating Systems,
+and Software Engineering.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">GitHub</h2>
+
+<div class="glass github">
+
+<p><strong>GitHub:</strong></p>
+
+<p>
+<a style="color:#60a5fa;" href="https://github.com/yochetan" target="_blank">
+github.com/yochetan
+</a>
+</p>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Let's Build Something Amazing Together</h2>
+
+<div class="glass contact">
+
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<input type="text" placeholder="Subject">
+<textarea placeholder="Your Message"></textarea>
+<button class="btn primary">Send Message</button>
+</form>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Chetan Mewada. All Rights Reserved.
+</footer>
+
+</body>
+</html>
+```
